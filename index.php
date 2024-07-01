@@ -11,11 +11,26 @@
 
 <body>
     <div id="app">
-        <main>
-            <ul v-for="element in toDoList" :key="element.id">
-                <li>{{element.task}}</li>
+        <div id="todo-container">
+
+            <div id="header">
+                <h1>To Do List</h1>
+            </div>
+
+            <form action="./script/script.php" method="GET">
+                <label for="add-tasks">Add your tasks</label>
+                <input type="text" class="input-item" name="add-tasks" id="add-tasks" v-model="newTask" />
+
+
+                <button type="submit">Add</button>
+            </form>
+
+
+            <h2>Task List</h2>
+            <ul id="list-container" v-for="element in toDoList" :key="element.id">
+                <li>In data {{element.dueDate}} : {{element.task}}</li>
             </ul>
-        </main>
+        </div>
     </div>
 
 

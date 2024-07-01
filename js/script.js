@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             toDoList: [],
+            newTask: '',
         }
     },
     methods: {
@@ -24,9 +25,19 @@ createApp({
                     // always executed
                 });
         },
+        addTask() {
+            if (this.newTask.trim() === '') return;
+            axios.post('./script/script.php', { task: this.newTask })
+                .then(response => {
+                    if (response.data.success) {
+                        this.toDoList.push(response.data.task);
+                        this.newTask = '';
+                    }
+                })
+                .catch(error => console.error(error));
+        }
     },
     created() {
         this.getData();
     }
-
 }).mount('#app')
