@@ -1,10 +1,9 @@
 <?php
 
-//var_dump($todoList);
-//header("Content-Type: application/json");
 
-$rawList = file_get_contents("./data/toDo.json");
+//header("Content-type: application/json");
 
-$list = json_decode($rawList, true);
+$rawList = file_get_contents(__DIR__ . "/../data/toDo.json");
 
-var_dump($list);
+
+echo $rawList;

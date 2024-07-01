@@ -1,5 +1,3 @@
-<?php include_once __DIR__ . "/script/script.php" ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,8 +12,8 @@
 <body>
     <div id="app">
         <main>
-            <ul>
-                <li></li>
+            <ul v-for="element in toDoList" :key="element.id">
+                <li>{{element.task}}</li>
             </ul>
         </main>
     </div>
