@@ -1,10 +1,10 @@
 <?php
 
 
-//header("Content-type: application/json");
+header("Content-type: application/json");
 
 
-$rawList = file_get_contents(__DIR__ . "/../data/toDo.json");
+$rawList = file_get_contents("../data/toDo.json");
 
 $data = json_decode($rawList, true);
 

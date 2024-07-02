@@ -9,7 +9,7 @@ createApp({
     },
     methods: {
         getData() {
-            axios.get('./script/script.php', {
+            axios.get('./server/script.php', {
                 params: {
 
                 }
@@ -28,7 +28,7 @@ createApp({
     },
     addItem() {
         if (this.toAddItem.trim() !== "") {
-            axios.get("./src/utilities/post.php", {
+            axios.get("./server/add.php", {
                 params: {
                     task: this.newTask,
                 }

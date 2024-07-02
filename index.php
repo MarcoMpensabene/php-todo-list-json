@@ -17,7 +17,7 @@
                 <h1>To Do List</h1>
             </div>
 
-            <form action="../script/script.php" method="GET">
+            <form action="./server/add.php" method="GET">
                 <label for="addTask">Add your tasks</label>
                 <input type="text" class="input-item" name="addTask" id="addTask" v-model="newTask" />
 

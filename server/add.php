@@ -4,7 +4,7 @@ header("Content-Type: application/json");
 $idsData = [];
 
 if (isset($_GET["addTask"])) {
-    $data = file_get_contents(__DIR__ . "/../data/toDo.json");
+    $data = file_get_contents("../data/toDo.json");
 
     $data = json_decode($data, true);
 
@@ -21,7 +21,7 @@ if (isset($_GET["addTask"])) {
 
     $jsonData = json_encode($data);
 
-    file_put_contents(__DIR__ . "/../data/toDo.json", $jsonData);
+    file_put_contents("../data/toDo.json", $jsonData);
 
     header("Location: ../index.php");
 } else {
