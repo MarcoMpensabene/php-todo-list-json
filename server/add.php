@@ -8,15 +8,9 @@ if (isset($_GET["addTask"])) {
 
     $data = json_decode($data, true);
 
-    foreach ($data as $item) {
-        $idsData[] = $item["id"];
-    };
-
     $data[] = [
         "task" => $_GET["addTask"],
-        "completed" => false,
-        "id" => max($idsData) + 1,
-        "dueData" => "today"
+        // "dueData" =>  $_GET["addDate"]
     ];
 
     $jsonData = json_encode($data);

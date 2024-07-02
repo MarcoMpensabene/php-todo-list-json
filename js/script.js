@@ -5,6 +5,7 @@ createApp({
         return {
             toDoList: [],
             newTask: '',
+            newDate: '',
         }
     },
     methods: {
@@ -27,10 +28,11 @@ createApp({
         },
     },
     addItem() {
-        if (this.toAddItem.trim() !== "") {
+        if (this.newTask.trim() !== "") {          //&& this.newDate.trim() !== "" 
             axios.get("./server/add.php", {
                 params: {
                     task: this.newTask,
+                    // dueData: this.newDate
                 }
             })
                 .then(function (response) {

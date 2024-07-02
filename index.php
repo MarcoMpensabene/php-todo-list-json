@@ -20,7 +20,8 @@
             <form action="./server/add.php" method="GET">
                 <label for="addTask">Add your tasks</label>
                 <input type="text" class="input-item" name="addTask" id="addTask" v-model="newTask" />
-
+                <!-- <label for="addDate">Add DATE</label>
+                <input type="text" class="input-item" name="addTask" id="addTask" v-model="newDate" /> -->
 
                 <button type="submit">Add</button>
             </form>
