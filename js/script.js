@@ -25,16 +25,20 @@ createApp({
                     // always executed
                 });
         },
-        addTask() {
-            if (this.newTask.trim() === '') return;
-            axios.post('./script/script.php', { task: this.newTask })
-                .then(response => {
-                    if (response.data.success) {
-                        this.toDoList.push(response.data.task);
-                        this.newTask = '';
-                    }
+    },
+    addItem() {
+        if (this.toAddItem.trim() !== "") {
+            axios.get("./src/utilities/post.php", {
+                params: {
+                    task: this.newTask,
+                }
+            })
+                .then(function (response) {
+                    console.log(response);
                 })
-                .catch(error => console.error(error));
+                .catch(function (error) {
+                    console.log(error);
+                })
         }
     },
     created() {

@@ -18,8 +18,8 @@
             </div>
 
             <form action="./script/script.php" method="GET">
-                <label for="add-tasks">Add your tasks</label>
-                <input type="text" class="input-item" name="add-tasks" id="add-tasks" v-model="newTask" />
+                <label for="addTask">Add your tasks</label>
+                <input type="text" class="input-item" name="addTask" id="addTask" v-model="newTask" />
 
 
                 <button type="submit">Add</button>
