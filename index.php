@@ -17,7 +17,7 @@
                 <h1>To Do List</h1>
             </div>
 
-            <form action="./script/script.php" method="GET">
+            <form action="../script/script.php" method="GET">
                 <label for="addTask">Add your tasks</label>
                 <input type="text" class="input-item" name="addTask" id="addTask" v-model="newTask" />
 
@@ -36,7 +36,7 @@
 
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/script.js"></script>
