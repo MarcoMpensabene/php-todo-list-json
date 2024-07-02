@@ -1,7 +1,6 @@
 <?php
 header("Content-Type: application/json");
 
-$idsData = [];
 
 if (isset($_GET["addTask"])) {
     $data = file_get_contents("../data/toDo.json");
